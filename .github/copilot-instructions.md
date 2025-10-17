@@ -1,7 +1,7 @@
 # AI Agent Instructions for Dinner Idea Generator
 
 ## Project Overview
-A web-based application that helps users generate dinner ideas. The project uses vanilla HTML/CSS/JavaScript with a focus on simplicity and clean design.
+A web-based application that .github/designhelps users generate dinner ideas. The project uses vanilla HTML/CSS/JavaScript with a focus on simplicity and clean design.
 
 ## Architecture
 - Single-page application (SPA) structure

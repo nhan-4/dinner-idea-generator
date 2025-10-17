@@ -6,10 +6,12 @@
     <title>Dinner Idea Generator</title>
     <style>
         :root {
-            --primary-color: #FF6B6B;
-            --secondary-color: #4ECDC4;
-            --bg-color: #f8f9fa;
-            --text-color: #2C3E50;
+            --primary-color: #0066FF;    /* Bright blue from reference */
+            --secondary-color: #FF6B4A;   /* Orange-red from reference */
+            --accent-yellow: #FFB800;     /* Yellow from reference */
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --grey-light: #F6F6F6;
         }
 
         * {
@@ -24,36 +26,81 @@
             color: var(--text-color);
             line-height: 1.6;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            padding: 40px;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
         }
 
         h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-bottom: 30px;
             color: var(--text-color);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .accent {
             color: var(--secondary-color);
-            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+        .accent::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-yellow);
+            border-radius: 2px;
+        }
+
+        .illustration {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--grey-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -61,6 +108,16 @@
     <div class="container">
         <h1>Dinner Idea Generator</h1>
         <p>Never wonder <span class="accent">"What's for dinner?"</span> again. Our simple tool helps you discover delicious dinner ideas when you're out of inspiration.</p>
+        
+        <div class="illustration">
+            <div class="icon">🥗</div>
+            <div class="icon">🍳</div>
+            <div class="icon">🥘</div>
+            <div class="icon">🌮</div>
+            <div class="icon">🍜</div>
+        </div>
+
+        <a href="#" class="button">Generate dinner idea</a>
     </div>
 </body>
 </html>
